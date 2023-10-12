@@ -1,0 +1,202 @@
+/*
+home-container
+
+    home-top
+        home-banner-text
+            >p
+        img
+
+*/
+
+.home-container {
+    margin-top: 80px;
+}
+
+.home-top {
+    background-color: #FFF8C9;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 500px;
+    overflow: hidden;
+}
+
+.home-banner-text {
+    text-align: center;
+    font-size: 3.5rem;
+    white-space: nowrap;
+    z-index: 1;
+    font-weight: 700;
+}
+
+.home-top img {
+    width: 300px;
+    transform: rotate(-25deg);
+}
+
+@media screen and (max-width:768px) {
+    .home-top {
+        height: 400px;
+    }
+
+    .home-banner-text {
+        font-size: 2.5rem;
+    }
+
+    .home-top img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .home-top {
+        height: 400px;
+    }
+
+    .home-banner-text {
+        font-size: 2.5rem;
+        position: absolute;
+    }
+
+    .home-top img {
+        width: 200px;
+    }
+}
+
+
+
+.home-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+
+}
+
+.home-bottom-text {
+    align-self: flex-start;
+    margin: 30px 0 0 30px;
+    font-size: 2.5rem;
+    font-weight: lighter;
+}
+
+.tiles-type {
+    display: grid;
+    grid-template: 50% 50% / 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+    width: 100%;
+    height: 400px;
+    padding: 0 20px;
+    overflow: hidden;
+    margin-bottom: -20px;
+
+}
+
+.img {
+    grid-row-start: span 2;
+    width: 80%;
+    height: 80%;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.img:hover {
+    box-shadow: 0 0 30px 5px black;
+}
+
+.background1 {
+    background-image: url("../../img/wall.jpeg");
+    background-size: cover;
+}
+
+.background2 {
+    background-image: url("../../img/floor.jpeg");
+    background-size: cover;
+}
+
+.background3 {
+    background-image: url("../../img/kitchen.jpeg");
+    background-size: cover;
+}
+
+.background4 {
+    background-image: url("../../img/bathroom.jpeg");
+    background-size: cover;
+}
+
+.img p {
+    position: absolute;
+    bottom: 20px;
+    width: 50%;
+    text-align: center;
+    min-width: max-content;
+    background-color: white;
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
+
+.empty {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.viewProductBtn {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.viewProductBtn button {
+    font-size: 1.5rem;
+    padding: 5px 40px;
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.viewProductBtn button:hover {
+    background-color: #FFF8C9;
+}
+
+@media screen and (min-width: 1000px) {
+    .tiles-type {
+        height: 450px;
+    }
+
+    .img p {
+        font-size: 2rem;
+    }
+
+    .viewProductBtn button {
+        font-size: 1.8rem;
+        padding: 5px 40px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .tiles-type {
+        padding-top: 30px;
+    }
+
+    .empty {
+        display: none;
+    }
+
+    .tiles-type {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        height: 100%;
+        row-gap: 10px;
+    }
+
+    .viewProductBtn {
+        margin: 20px 0;
+    }
+
+    .img {
+        grid-row-start: span 1;
+        margin: 10px 0;
+        height: 300px;
+    }
+}
