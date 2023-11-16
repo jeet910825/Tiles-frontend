@@ -1,12 +1,13 @@
 import React, { useState ,useEffect } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Clear } from "@mui/icons-material";
 
 function Header() {
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   const handleScroll = () => {
     if (window.scrollY > 30) {
@@ -28,14 +29,13 @@ function Header() {
 
   return (
     <div className={`navbar ${scrolled ? "scrolled":""}`}>
-      <div className="nav-brand">
+      <div className="nav-brand" onClick={()=>navigate('/')}>
         <h1>Pooja tiles</h1>
       </div>
       <div className={`nav-link ${toggle ? "active" : ""} ${scrolled ?"scrolled":""}`}>
-        <Link>Home</Link>
-        <Link>Product</Link>
-        <Link>About</Link>
-        <Link>Contact</Link>
+        <Link to={'/'}>Home</Link>
+        <Link to={'/product'}>Product</Link>
+        <Link to={'/admin'}>Admin</Link>
       </div>
       <div onClick={() => setToggle(!toggle)} className="toggle-button">
         {toggle ? <Clear /> : <MenuIcon />}

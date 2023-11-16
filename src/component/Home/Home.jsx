@@ -1,8 +1,10 @@
 import React from "react";
 import "./Home.css";
 import tile1 from "../../img/tile1.jpg";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate=useNavigate()
   return (
     <div className="home-container">
       <div className="home-top">
@@ -31,7 +33,7 @@ function Home() {
           </div>
         </div>
         <div className="viewProductBtn">
-          <button>view product</button>
+          <button onClick={()=>{navigate('/product')}}>View Product </button>
         </div>
       </div>
     </div>

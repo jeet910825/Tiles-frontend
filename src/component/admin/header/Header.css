@@ -1,0 +1,49 @@
+/*admin-header 
+    admin-title
+    search-item
+        search-Input
+        search-button
+    
+*/
+.admin-header{
+    display: flex;
+    height: 80px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #333;
+}
+.admin-title{
+    color: white;
+}
+.admin-button{
+    display: flex;
+    width: 250px;
+    justify-content: space-around;
+}
+.search-Item{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    border: 0.1px solid black;
+    width: 300px;
+   
+}
+.search-input{
+    
+    height: 30px;
+    border: unset;
+    width: 100%;
+}
+.search-input:focus{
+    outline: unset;
+}
+.search-button{
+    height: 30px;
+    border: none;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+}
