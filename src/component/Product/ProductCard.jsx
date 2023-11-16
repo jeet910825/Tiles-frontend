@@ -28,7 +28,7 @@ function ProductCard({ id, name, size, type, image ,category,brand }) {
       <div className="product-card">
         <div className="product-image" onClick={handleViewDetails}>
           <img
-            src={"http://localhost:3005/product" + image[0]}
+            src={"https://tiles-backend-production.up.railway.app/product" + image[0]}
             alt="name"
           ></img>
         </div>

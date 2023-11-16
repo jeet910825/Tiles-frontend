@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const productSlice = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3005/" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://tiles-backend-production.up.railway.app/" }),
   tagTypes: ["Product"], // Use an object for baseUrl
   endpoints: (builder) => ({
     getFilterProduct: builder.query({

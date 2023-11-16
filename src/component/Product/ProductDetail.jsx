@@ -4,7 +4,7 @@ import ClearIcon from "@mui/icons-material/Clear";
 
 function ProductDetail({ id, name, size, type, image, category, brand ,handleViewDetails }) {
   const [currentImage, setCurrentImage] = useState(
-    `http://localhost:3005/product${image[0]}`
+    `https://tiles-backend-production.up.railway.app/product${image[0]}`
   );
   const handleimageclick = (val) => {
     setCurrentImage(val.target.src);
@@ -24,7 +24,7 @@ function ProductDetail({ id, name, size, type, image, category, brand ,handleVie
             {image.map((item, index) => {
               return (
                 <img
-                  src={`http://localhost:3005/product${item}`}
+                  src={`https://tiles-backend-production.up.railway.app/product${item}`}
                   onClick={handleimageclick}
                   key={index}
                   alt="image"
