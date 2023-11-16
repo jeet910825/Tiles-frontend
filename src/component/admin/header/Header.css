@@ -8,6 +8,7 @@
 .admin-header{
     display: flex;
     height: 80px;
+    min-height: max-content;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
