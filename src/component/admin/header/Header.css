@@ -7,7 +7,7 @@
 */
 .admin-header{
     display: flex;
-    height: 80px;
+    padding: 20px;
     min-height: max-content;
     justify-content: space-around;
     align-items: center;
