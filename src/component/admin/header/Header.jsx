@@ -34,6 +34,7 @@ function Header(props) {
           variant="contained"
           color="primary"
           size="small"
+          className="btn"
           onClick={() => {
             navigate("create");
           }}
@@ -41,6 +42,7 @@ function Header(props) {
           Add product
         </Button>
         <Button
+          className="btn"
           variant="outlined"
           color="error"
           size="small"

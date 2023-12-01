@@ -48,3 +48,12 @@
     justify-content: center;
     background-color: orange;
 }
+@media screen and (max-width:692px) {
+    .admin-button{
+        width: 100%;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+}
